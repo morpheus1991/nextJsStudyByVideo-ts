@@ -31,13 +31,17 @@ export default function Faq() {
     <AppLayout>
       <div className="bg-gray-50 grow">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto divide-y-2 divide-gray-200">
+          <div className="max-w-3xl mx-auto ">
             <h2 className="text-center text-3xl font-extrabold text-cyan-900 sm:text-4xl">
               Frequently asked questions
             </h2>
-            <dl className="mt-6 space-y-6 divide-y divide-gray-200">
+            <dl className="mt-16 space-y-6 divide-y divide-gray-200">
               {faqs.map((faq) => (
-                <Disclosure as="div" key={faq.question} className="pt-6">
+                <Disclosure
+                  as="div"
+                  key={faq.question}
+                  className="pt-6 relative"
+                >
                   {({ open }) => (
                     <>
                       <dt className="text-lg">
@@ -56,8 +60,10 @@ export default function Faq() {
                           </span>
                         </Disclosure.Button>
                       </dt>
-                      <Disclosure.Panel as="dd" className="mt-2 pr-12">
-                        <p className="text-base text-gray-500">{faq.answer}</p>
+                      <Disclosure.Panel as="dd" className="mt-2">
+                        <p className="text-base text-gray-800 p-4 bg-gray-100">
+                          {faq.answer}
+                        </p>
                       </Disclosure.Panel>
                     </>
                   )}
