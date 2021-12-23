@@ -9,7 +9,6 @@ const AppLayout = ({ children }: Props) => {
 
   const gnbToggle = () => {
     setGnbOpen((prev) => !prev);
-    console.log(gnbOpen);
   };
   return (
     <div>
@@ -62,6 +61,13 @@ const AppLayout = ({ children }: Props) => {
                 <Link href="/signup">
                   <a className="flex text-white  px-2 md:text-cyan-600 md:hover:text-cyan-900 py-1">
                     signup
+                  </a>
+                </Link>
+              </li>
+              <li className="border-t-2 border-transparent md:hover:border-slate-800">
+                <Link href="/faq">
+                  <a className="flex text-white  px-2 md:text-cyan-600 md:hover:text-cyan-900 py-1">
+                    FAQ
                   </a>
                 </Link>
               </li>
